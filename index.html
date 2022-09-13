@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mini-atm</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <section class="name">
+        <header>
+            <h1 style="color: white
+            ;">ATM</h1>
+            <h3 style="color:white; font-size: large;">Card Return 🏧</h3>
+        </header>
+        <div class="h3">
+            <div class="h4">
+                <p style="color:rgb(1, 180, 245) ;">Welcome</p>
+                <h2 style="color:white;">Rioy Fresh</h2>
+                <p style="color:rgb(1, 180, 245) ;">Account #1</p>
+                <h2 style="color:white;">001234987</h2>
+                <p style="color:rgb(1, 180, 245) ;">Savings #2</p>
+                <h2 style="color:white;" id="bal">1000</h2>
+            </div>
+            <div class="btn">
+                <button onclick="withdraw()">Withdraw</button>
+                <button onclick="deposit()">Deposit</button>
+                <button onclick="payments()">Payments</button>
+                <button onclick="airtime()">Airtime</button>
+                <button onclick="settings()">Settings</button>
+                <button style="background-color: #2257BF; border:1px solid #2257BF; " onclick="others()">Other</button>
+            </div>
+            <div class="footer">
+              <h5 id="p" style="text-align: center;">Kindly enter amount</h5>
+              <input style="background-color: #f6006b; height: 35px; width: 60%; color:white;" type="text" placeholder="$" id="inp">
+          </div>
+        </div>
+    </section>
+
+<script>
+    var balance = 1000
+        function withdraw () {
+            var amount = Number(inp.value)
+            console.log(amount);
+            let mm = bal.innerText
+            console.log(mm);
+           if(amount >=1000){
+             alert('u are mad you want all money abi ')
+            p.innerText = "Transaction Declined"
+             
+           }else{
+              let newbal = mm-amount
+              bal.innerText = newbal
+            p.innerText = "Withdrawal Successful"
+           }
+       
+        }
+
+        function deposit () {
+            var amount = Number(inp.value)
+            console.log(amount);
+            let mm = bal.innerText
+            console.log(mm);
+           if(amount <1000){
+             alert('Broke ass nigga,deposit more than 1k')
+             p.innerText = "Transaction Declined"
+           }else{
+              let newbal = parseInt(mm)+parseInt(amount)
+              bal.innerText = newbal
+             p.innerText = "Transaction Successful"
+              
+           }
+       
+        }
+        function payments() {
+            var amount = Number(inp.value)
+            console.log(amount);
+            let mm = bal.innerText
+            console.log(mm);
+           if(amount <1000){
+             alert('Pay beta Money ')
+             p.innerText = "Transaction Declined"
+
+           }else{
+              let newbal = mm-amount
+              bal.innerText = newbal
+             p.innerText = "Payment Successful"
+              
+           }
+       
+        }
+
+        function airtime() {
+            var amount = Number(inp.value)
+            console.log(amount);
+            let mm = bal.innerText
+            console.log(mm);
+           if(amount <100){
+             alert('Pay beta Money ')
+           }else{
+              let newbal = mm-amount
+              bal.innerText = newbal
+             p.innerText = "Transaction Successful"
+
+           }
+       
+        }
+
+
+</script>
+    
+</body>
+</html>
